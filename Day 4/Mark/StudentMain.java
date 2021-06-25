@@ -1,4 +1,6 @@
+
 package work;
+import java.util.Scanner;
 
 class MarkException extends Exception{
 	private int mark;
@@ -36,11 +38,21 @@ class Student  {
 public class StudentMain {
 
 	public static void main(String[] args) {
-		 Student obj=new Student(1011,"amal",57);
-		 Student obj1=new Student(1012,"arul",32);
-		 obj.display();
-		 obj1.display();
-
+		
+		Scanner s=new Scanner (System.in) ;
+		Scanner s1=new Scanner (System.in) ;
+        int rollno,mark;
+        String name;
+        System.out.println("Enter the roll no");
+        rollno=s.nextInt();
+        System.out.println("Enter the name");
+        name=s1.nextLine();
+        System.out.println("Enter the Marks obtained");
+        mark=s.nextInt();
+		 Student obj=new Student(rollno,name,mark);
+		
+	      obj.display();
+		
 	}
 
 }
